@@ -4,7 +4,7 @@
       "id": "25166",
       "title": "Aller faire les courses",
       "description": "- Pain\n- Fruits\n- Légumes",
-      "status": "done",
+      "status": "todo",
       "createdAt": "1636847411182"
     },
     {
@@ -28,14 +28,6 @@
       "description": null,
       "status": "done",
       "createdAt": "1636847586994"
-    },
-    {
-      "id": "79696",
-      "title": "test",
-      "description": "desc",
-      "status": "todo",
-      "createdAt": "1636909174346",
-      "deadline": "2021-11-20T21:04"
     }
   ]
 }
