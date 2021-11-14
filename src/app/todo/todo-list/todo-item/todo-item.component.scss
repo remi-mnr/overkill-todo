@@ -1,0 +1,39 @@
+mat-card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .mat-card-avatar {
+        display: flex;
+        height: auto;
+        cursor: pointer;
+    }
+
+    mat-card-title{
+        cursor: pointer;
+        &.crossed {
+            text-decoration: line-through;
+        }
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    mat-card-subtitle {
+        margin-bottom: 0px;
+        margin-top: 2px;
+    }
+
+    span {
+        width: 100%;
+    }
+
+    mat-checkbox {
+        margin-left: auto;
+    }
+}
+
+.done {
+    color: grey;
+}
+

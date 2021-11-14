@@ -1,0 +1,25 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    max-width: 1500px;
+    margin: auto;
+
+    app-todo-item {
+        margin-bottom: 15px;
+    }
+}
+
+button {
+    position: absolute;
+    bottom: 45px;
+    right: 45px;
+}
+
+ng-template {
+    margin: auto;
+}
+
+.loading {
+    margin: auto;
+}

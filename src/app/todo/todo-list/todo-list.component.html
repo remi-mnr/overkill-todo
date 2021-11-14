@@ -1,0 +1,15 @@
+<ng-container *ngIf="requestState$ | async as RequestState">
+    <div class="list-container" *ngIf="RequestState === RequestStates.Success; else loading">
+        <app-todo-item *ngFor="let todo of todos$ | async" [todo]="todo" (statusChanged)="updateStatus($event, todo.id)"></app-todo-item>
+    </div>
+</ng-container>
+
+<button mat-fab color="accent" routerLink='new'>
+    <mat-icon>add</mat-icon>
+</button>
+
+<ng-template #loading>
+    <div class="list-container">
+        <p class="loading">Loading <span>...</span></p>
+    </div>
+</ng-template>

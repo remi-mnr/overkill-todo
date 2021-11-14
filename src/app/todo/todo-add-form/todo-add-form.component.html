@@ -1,0 +1,29 @@
+<div class="todo-form">
+
+    <button mat-raised-button color="primary" class="back-button" routerLink='..'>Retour</button>
+
+    <mat-card>
+        <form [formGroup]="myForm" (ngSubmit)="addTodo()">
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Titre</mat-label>
+                <input matInput placeholder="Mon todo" formControlName="title" required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea rows="5" matInput placeholder="Description de mon todo" formControlName="description"></textarea>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Deadline</mat-label>
+                <input type="datetime-local" matInput formControlName="deadline">
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button color="accent" type="submit" [disabled]="myForm.invalid">Ajouter</button>
+            </div>
+        </form>
+    </mat-card>
+ 
+</div>

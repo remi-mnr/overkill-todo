@@ -1,0 +1,15 @@
+<mat-card [ngClass]="{'done': isChecked }" *ngIf="todo">
+    <mat-card-header>
+
+        <div mat-card-avatar [routerLink]="todo.id" class="status-icon"><mat-icon>{{ todo.status | todoStatusIcon }}</mat-icon></div>
+
+        <mat-card-title [routerLink]="todo.id" [ngClass]="{'crossed': isChecked }">{{ todo.title }}</mat-card-title>
+
+        <mat-checkbox [checked]="isChecked" (change)="changeStatus($event.checked)"></mat-checkbox>
+
+        <mat-card-subtitle *ngIf="todo.deadline as deadline">
+            {{ deadline | date:'d/M/yyyy - HH:mm' }}
+        </mat-card-subtitle>
+        
+    </mat-card-header>
+</mat-card>
